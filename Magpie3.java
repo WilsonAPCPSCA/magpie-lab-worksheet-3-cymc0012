@@ -1,13 +1,14 @@
+package MagPie;
 /**
- * A program to carry on conversations with a human user.
- * This version: 
- * <ul><li>
- *    Uses advanced search for keywords 
- * </li></ul> 
- *    
- * @author Laurie White
- * @version April 2012
- */
+* A program to carry on conversations with a human user.
+* This version: 
+* <ul><li>
+*    Uses advanced search for keywords 
+* </li></ul> 
+*    
+* @author Laurie White
+* @version April 2012
+*/
 public class Magpie3
 {
 	/**
@@ -44,6 +45,23 @@ public class Magpie3
 				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		else if (findKeyword(statement, "cat") >=0 
+				|| findKeyword(statement, "dog")>=0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (findKeyword(statement, "Mr. Trimborn")>=0) {
+			response = "He can control his temper very well.";
+		}
+		else if (findKeyword(statement, "weather")>=0) {
+			response = "The weather is nice today!";
+		}
+		else if (findKeyword(statement, "sleep")>=0) {
+			response = "Go Sleep.";
+		}
+		else if(findKeyword(statement, "eat")>=0) {
+			response = "I'm hungry.";
 		}
 		else
 		{
